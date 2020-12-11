@@ -6,14 +6,7 @@
 
 <script>
   import Tailwindcss from './TailwindStyles.svelte'
-  import { Router, Link, Route } from 'svelte-routing'
   import FrontPage from './components/FrontPage.svelte'
-
-  export let url = ''
 </script>
 
-<Router {url}>
-  <Route path="/">
-    <FrontPage />
-  </Route>
-</Router>
+<FrontPage />

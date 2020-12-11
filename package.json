@@ -5,27 +5,27 @@
     "test": "jest"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.2.0",
-    "svelte": "^3.21.0",
-    "svelte-check": "^1.1.4",
+    "@tailwindcss/typography": "^0.3.1",
+    "svelte": "^3.31.0",
+    "svelte-check": "^1.1.20",
     "svelte-routing": "^1.4.2",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^2.0.1"
   },
   "devDependencies": {
     "@snowpack/app-scripts-svelte": "^1.2.0",
-    "@snowpack/plugin-babel": "^2.1.4",
+    "@snowpack/plugin-babel": "^2.1.5",
     "@testing-library/jest-dom": "^5.5.0",
     "@testing-library/svelte": "^3.0.0",
-    "autoprefixer": "^9.8.0",
-    "husky": "^4.2.5",
+    "autoprefixer": "^10.1.0",
+    "husky": "^4.3.5",
     "jest": "^25.4.0",
-    "lint-staged": "^10.2.10",
+    "lint-staged": "^10.5.3",
     "node-sass": "^5.0.0",
-    "postcss": "^7.0.32",
-    "postcss-cli": "^7.1.1",
-    "postcss-load-config": "^2.1.0",
-    "prettier": "2.0.5",
-    "snowpack": "^2.5.0",
+    "postcss": "^8.2.1",
+    "postcss-cli": "^8.3.0",
+    "postcss-load-config": "^3.0.0",
+    "prettier": "^2.2.1",
+    "snowpack": "^3.0.0-rc.1",
     "svelte-preprocess": "^4.5.2"
   }
 }
