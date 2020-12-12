@@ -1,6 +1,8 @@
 <style>
-  main {
-    @apply my-4 mx-4;
+  body {
+    min-height: 100vh;
+    margin: 0;
+    background: #fdfdf0;
   }
 </style>
 
