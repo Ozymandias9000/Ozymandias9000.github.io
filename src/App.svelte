@@ -1,8 +1,11 @@
 <style>
-  body {
+  :global(:root) {
+    --color-dark: #03010a;
+    color: var(--color-dark);
     min-height: 100vh;
     margin: 0;
     background: #fdfdf0;
+    overflow: hidden;
   }
 </style>
 
