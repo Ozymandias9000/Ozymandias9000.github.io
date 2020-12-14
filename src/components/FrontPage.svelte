@@ -1,5 +1,8 @@
 <style lang="scss">
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,200;1,200&display=swap');
   .scrollContainer {
+    font-family: 'IBM Plex Serif';
+    font-style: italic;
     height: 100vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
@@ -54,22 +57,32 @@
     transform-origin: 150px 150px;
   }
 
-  svg {
+  .svgContainer {
     position: absolute;
     top: 0;
     height: 100vh;
     width: 100%;
     z-index: -1;
   }
+  circle {
+    position: relative;
+    top: 100;
+  }
 </style>
 
 <script>
+  import ProfPic from './ProfPic.svelte'
+  import { spring } from 'svelte/motion'
+
   let checked = true
+
+  let coords = spring({ x: 50, y: 50 })
+  let size = spring(10)
 </script>
 
 <div class="scrollContainer {checked ? 'whiteText' : ''}">
-  <section>
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh">
+  <section on:mousemove={(e) => coords.set({ x: e.clientX, y: e.clientY })}>
+    <svg class="svgContainer" xmlns="http://www.w3.org/2000/svg" width="100%" height="100vh">
       <defs>
         {#key checked}
           <pattern id="blocks" patternUnits="userSpaceOnUse" width="200" height="200">
@@ -81,21 +94,31 @@
         {/key}
       </defs>
       <rect width="100%" height="100%" fill="url(#blocks)" />
+
+      <!-- <circle cx={$coords.x} cy={$coords.y} r={$size} fill="red" /> -->
     </svg>
     <div class="container relative h-screen">
-      <label class="absolute top-4 right-4">
-        <span class="pr-2"> {checked ? 'Dark' : 'Light'} </span>
+      <label class="fixed top-4 right-4">
+        <span class="pr-2">
+          {checked ? 'Dark' : 'Light'}
+          <!-- {$coords.x} {$coords.y} -->
+        </span>
         <input type="checkbox" bind:checked />
       </label>
       <div class="flex flex-col justify-center items-center h-full">
-        <h1 class="prose text-2xl">Hi there I'm nick</h1>
+        <ProfPic />
+        <h1 class="prose text-2xl relative">~ nick murphy ~</h1>
+        <span class="prose text-md not-italic relative">wildly capable software engineer</span>
+      </div>
+      <div class="relative bottom-32 text-center prose text-md max-w-none transform rotate-90 not-italic text-2xl">
+        ->
       </div>
     </div>
   </section>
   <section>
     <div class="container relative h-screen">
-      <div class="flex flex-col justify-center items-center h-full bg-red-400">
-        <h1 class="prose text-2xl">Yooooohooo</h1>
+      <div class="flex flex-col justify-center items-center h-full ">
+        <h1 class="prose text-2xl">~ Projects ~</h1>
       </div>
     </div>
   </section>
