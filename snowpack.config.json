@@ -1,8 +1,5 @@
 {
   "extends": "@snowpack/app-scripts-svelte",
   "devOptions": {},
-  "installOptions": {},
-  "experiments": {
-      "source": "skypack"
-  }
+  "installOptions": {}
 }
