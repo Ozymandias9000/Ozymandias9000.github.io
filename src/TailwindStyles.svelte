@@ -8,11 +8,14 @@
       --color-dark: #03010a;
       --color-grey: #ded;
 
-      color: var(--color-dark);
       min-height: 100vh;
       margin: 0;
       background: #fdfdf0;
       overflow: hidden;
+    }
+
+    span {
+      @apply text-white;
     }
 
     a,
@@ -26,6 +29,9 @@
       }
     }
 
+    h1 {
+      font-family: 'IBM Plex Serif';
+    }
     h1,
     span,
     select {
