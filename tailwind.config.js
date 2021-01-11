@@ -1,7 +1,24 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
-  //   purge: [],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['IBM Plex Sans', ...defaultTheme.fontFamily.sans],
+        serif: ['IBM Plex Serif', ...defaultTheme.fontFamily.serif],
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            a: {
+              color: '#2491e8',
+              '&:hover': {
+                color: '#2d9cbc',
+              },
+            },
+          },
+        },
+      },
       colors: {
         black: '#03010a',
         white: '#f8f8ff',
@@ -212,6 +229,5 @@ module.exports = {
       140: '36rem',
     },
   },
-  //   variants: {},
   plugins: [require('@tailwindcss/typography')],
 }

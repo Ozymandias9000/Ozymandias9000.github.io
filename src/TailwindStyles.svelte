@@ -8,6 +8,7 @@
       --color-dark: #03010a;
       --color-grey: #ded;
 
+      font-size: 17px;
       min-height: 100vh;
       margin: 0;
       background: #fdfdf0;
@@ -29,9 +30,10 @@
       }
     }
 
-    h1 {
-      font-family: 'IBM Plex Serif';
+    a {
+      text-decoration: none !important;
     }
+
     h1,
     span,
     select {

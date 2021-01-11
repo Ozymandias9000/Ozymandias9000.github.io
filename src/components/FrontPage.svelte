@@ -1,7 +1,6 @@
 <style lang="scss">
   .scrollContainer {
     font-family: 'IBM Plex Sans';
-    font-style: italic;
     height: 100vh;
     // scroll-snap-type: y mandatory;
     overflow-y: scroll;
@@ -74,6 +73,21 @@
 
   .whatIDo {
     filter: drop-shadow(0 0 3px #03010a);
+
+    transition: all 0.5s;
+    &:hover {
+      animation: neon 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes neon {
+      from {
+        filter: drop-shadow(0 0 3px #03010a);
+      }
+      to {
+        filter: drop-shadow(0 0 2px #edf0f7) drop-shadow(0 0 6px #edf0f7) drop-shadow(0 0 10px #edf0f7)
+          drop-shadow(0 0 12px #5042a3) drop-shadow(0 0 14px #5042a3) drop-shadow(0 0 6px #5042a3);
+      }
+    }
   }
 </style>
 
@@ -81,6 +95,7 @@
   import IntersectionObs from './IntersectionObs.svelte'
 
   import ProfPic from './ProfPic.svelte'
+  import SideLabel from './SideLabel.svelte'
   import Switch from './Switch.svelte'
 
   let checked = true
@@ -121,8 +136,8 @@
     </svg>
     <div class="container relative h-screen">
       <div class="fixed top-2 right-4 z-50">
-        <button class="pr-8 cursor-pointer {checked ? 'text-white hover:text-gray-400' : ''}">Projects</button>
-        <button class="pr-8 cursor-pointer {checked ? 'text-white hover:text-gray-400' : ''}">Contact Me</button>
+        <button class="prose pr-8 cursor-pointer {checked ? 'text-white hover:text-gray-400' : ''}">Projects</button>
+        <button class="prose pr-8 cursor-pointer {checked ? 'text-white hover:text-gray-400' : ''}">Contact Me</button>
       </div>
       <div class="fixed top-2 left-4 z-50">
         <Switch text={checked ? 'Fiat Lux' : 'Fiat Noctem'} id="toggle" bind:checked />
@@ -133,11 +148,15 @@
 
           {#if !intersecting}
             <div
-              class="fixed top-0 {checked ? 'bg-pacific-700' : 'bg-pacific-100'}  opacity-95 h-12 w-full pointer-events-none z-40" />
-            <h1 class="prose text-2xl fixed {checked ? 'text-white' : ''} tracking-wide top-0 z-50">~ nick murphy ~</h1>
+              class="fixed top-0 right-0 {checked ? 'bg-pacific-700' : 'bg-pacific-100'}  opacity-95 h-12 w-full pointer-events-none z-40" />
+            <h1 class="prose font-serif text-2xl fixed {checked ? 'text-white' : ''} tracking-wide top-1 z-50">
+              ~ nick murphy ~
+            </h1>
           {/if}
         </IntersectionObs>
-        <h1 class="prose text-2xl sticky {checked ? 'text-white' : ''} tracking-wide top-0">~ nick murphy ~</h1>
+        <h1 class="prose font-serif text-2xl sticky {checked ? 'text-white' : ''} tracking-wide top-1">
+          ~ nick murphy ~
+        </h1>
 
         <select
           style="text-align-last: center;"
@@ -146,8 +165,8 @@
           selected="skilled">
           <option value="wildly">wildly</option>
           <option value="passionately">passionately</option>
+          <option value="consistently">consistently</option>
           <option value="indubitably">indubitably</option>
-          <option value="always">always</option>
         </select>
         <select
           style="text-align-last: center;"
@@ -156,14 +175,13 @@
           selected="skilled">
           <option value="skilled">skilled</option>
           <option value="enthusiastic">enthusiastic</option>
-          <option value="learning">learning</option>
+          <option value="involved">involved</option>
           <option value="humble">humble</option>
         </select>
 
-        <span class="prose text-md not-italic relative {checked ? 'text-white' : ''} tracking-wider">
-          software engineer</span>
+        <span class=" text-md  relative {checked ? 'text-white' : ''} tracking-wider"> software engineer</span>
       </div>
-      <div class="relative">
+      <!-- <div class="relative">
         <span
           class="relative top-56 transform w-8 h-8 rounded-md flex items-center justify-center m-auto z-10 transition-colors duration-1500 ease-in-out arrow-clip  bg-royalblue-300" />
         <span
@@ -172,7 +190,7 @@
           class="relative top-44 transform w-20 h-20 rounded-md flex items-center justify-center m-auto z-10 transition-colors duration-1500 ease-in-out arrow-clip  bg-royalblue-700" />
         <span
           class="relative top-30 transform w-26 h-26 rounded-md flex items-center justify-center m-auto z-10 transition-colors duration-1500 ease-in-out arrow-clip bg-royalblue-900" />
-      </div>
+      </div> -->
     </div>
   </section>
   <section class="relative">
@@ -188,7 +206,7 @@
 
   <section class="bg-denim-300">
     <div class="flex flex-col justify-center items-center h-full relative">
-      <div class="w-3/5 absolute top-20 z-10">
+      <div class="absolute top-20 z-10" style="width:1050px">
         <div class="transform -skew-x-12 -rotate-3 bg-royalblue-800 rounded-2xl shadow-2xl">
           <svg
             class="whatIDo"
@@ -222,13 +240,45 @@
         </div>
 
         <div
-          class="-skew-x-12 p-4 prose text-lg text-white z-20 absolute top-4 right-8 w-1/2 transform -rotate-3 bg-carrot-400 rounded-2xl border-red-400 border-2 shadow-md not-italic text-center">
+          class="-skew-x-12 p-4 prose prose-lg text-white z-20 absolute top-4 right-8 transform -rotate-3 bg-carrot-400 rounded-2xl border-red-400 border-2 shadow-md  text-center font-bold">
           <span>Full Stack Development (mostly Typescript/React/Express)</span>
         </div>
       </div>
 
-      <div class="bg-pacific-700 relative w-full pt-68 pb-68 clip-odd flex flex-col items-center justify-center">
-        <h2 class="prose text-2xl text-white block">Users</h2>
+      <div class="bg-pacific-800 relative w-full p-40 pt-68 pb-68 clip-odd flex flex-col items-center justify-center">
+        <div class="pr-44 pl-44">
+          <div class="mb-8">
+            <span class="prose prose-lg text-white ">Currently at
+              <a href="https://www.minutemedia.com/" target="_blank">Minute Media</a>.</span>
+          </div>
+
+          <div class="prose prose-lg text-white mb-8">
+            I've worked (and taken lead) on a number of projects that can't be shown here. However, I can provide a
+            general sample of what I've done.
+          </div>
+
+          <SideLabel label="Projects" />
+
+          <h4 class="font-serif font-bold uppercase text-orchid-300 tracking-wider">Content Import</h4>
+          <div class="prose prose-lg text-white mb-4">
+            Service to crawl unstructured content and transform into structured JSON
+          </div>
+
+          <h4 class="font-serif font-bold uppercase text-orchid-300 tracking-wider">Admin Portal</h4>
+          <div class="prose prose-lg text-white mb-4">Greenfield users + payments management service</div>
+
+          <h4 class="font-serif font-bold uppercase text-orchid-300 tracking-wider">Front-end Redesign</h4>
+          <div class="prose prose-lg text-white mb-4">New front-end for CMS</div>
+
+          <h4 class="font-serif font-bold uppercase text-orchid-300 tracking-wider">UI Framework</h4>
+          <div class="prose prose-lg text-white mb-4">UI component library</div>
+
+          <!-- <div class="prose prose-lg text-white  mb-8">
+            I've worked (and taken lead) on a number of projects that can't be shown here. However, I can provide a
+            general description of what I've done.
+          </div> -->
+
+          <!-- <h2 class="prose text-2xl text-white block">Users</h2>
         <span class="mb-8">Typescript, Express, DynamoDB, Auth0</span>
 
         <h2 class="prose text-2xl text-white block">App</h2>
@@ -241,7 +291,23 @@
         <span class="mb-8">Typescript, React, Express, Auth0, MongoDB, SQS, ECS</span>
 
         <h2 class="prose text-2xl text-white block">Denali</h2>
-        <span class="mb-8">React, Express, MySQL</span>
+        <span class="mb-8">React, Express, MySQL</span> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-denim-300">
+    <div class="flex flex-col justify-center items-center h-full relative">
+      <div class="relative bottom-96 w-full p-40 pt-68 pb-68  flex flex-col items-center justify-center">
+        <div class="mb-8">
+          <ul class="prose prose-lg ">
+            <li>Service to migrate content across platforms</li>
+            <li>Service to migrate content across platforms</li>
+            <li>Service to migrate content across platforms</li>
+            <li>Service to migrate content across platforms</li>
+            <li>Service to migrate content across platforms</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
