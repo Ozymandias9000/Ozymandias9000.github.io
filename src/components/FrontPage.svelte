@@ -71,9 +71,15 @@
   .clip-odd {
     clip-path: polygon(0 0, 100% 40%, 100% 60%, 0 100%);
   }
+
+  .whatIDo {
+    filter: drop-shadow(0 0 3px #03010a);
+  }
 </style>
 
 <script>
+  import IntersectionObs from './IntersectionObs.svelte'
+
   import ProfPic from './ProfPic.svelte'
   import Switch from './Switch.svelte'
 
@@ -114,16 +120,25 @@
       <!-- <circle cx={$coords.x} cy={$coords.y} r={$size} fill="blue" /> -->
     </svg>
     <div class="container relative h-screen">
-      <div class="fixed top-4 right-4 z-20">
+      <div class="fixed top-2 right-4 z-50">
         <button class="pr-8 cursor-pointer {checked ? 'text-white hover:text-gray-400' : ''}">Projects</button>
         <button class="pr-8 cursor-pointer {checked ? 'text-white hover:text-gray-400' : ''}">Contact Me</button>
       </div>
-      <div class="fixed top-4 left-4 z-20">
+      <div class="fixed top-2 left-4 z-50">
         <Switch text={checked ? 'Fiat Lux' : 'Fiat Noctem'} id="toggle" bind:checked />
       </div>
       <div class="flex flex-col justify-center items-center h-3/5">
-        <ProfPic />
-        <h1 class="prose text-2xl relative {checked ? 'text-white' : ''} tracking-wide">~ nick murphy ~</h1>
+        <IntersectionObs let:intersecting top={0}>
+          <ProfPic />
+
+          {#if !intersecting}
+            <div
+              class="fixed top-0 {checked ? 'bg-pacific-700' : 'bg-pacific-100'}  opacity-95 h-12 w-full pointer-events-none z-40" />
+            <h1 class="prose text-2xl fixed {checked ? 'text-white' : ''} tracking-wide top-0 z-50">~ nick murphy ~</h1>
+          {/if}
+        </IntersectionObs>
+        <h1 class="prose text-2xl sticky {checked ? 'text-white' : ''} tracking-wide top-0">~ nick murphy ~</h1>
+
         <select
           style="text-align-last: center;"
           class="prose duration-1000 w-30 {checked ? 'text-white bg-black' : ''}"
@@ -144,6 +159,7 @@
           <option value="learning">learning</option>
           <option value="humble">humble</option>
         </select>
+
         <span class="prose text-md not-italic relative {checked ? 'text-white' : ''} tracking-wider">
           software engineer</span>
       </div>
@@ -206,8 +222,8 @@
         </div>
 
         <div
-          class="-skew-x-12 p-4 prose text-xl text-white z-20 absolute top-4 right-8 w-1/2 transform -rotate-3 bg-carrot-400 rounded-2xl border-red-400 border-2 shadow-md not-italic">
-          <span>Full Stack Development (mostly Typescript/Javascript)</span>
+          class="-skew-x-12 p-4 prose text-lg text-white z-20 absolute top-4 right-8 w-1/2 transform -rotate-3 bg-carrot-400 rounded-2xl border-red-400 border-2 shadow-md not-italic text-center">
+          <span>Full Stack Development (mostly Typescript/React/Express)</span>
         </div>
       </div>
 
