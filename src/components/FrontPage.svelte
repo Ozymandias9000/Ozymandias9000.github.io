@@ -175,6 +175,7 @@
       <div class="w-3/5 absolute top-20 z-10">
         <div class="transform -skew-x-12 -rotate-3 bg-royalblue-800 rounded-2xl shadow-2xl">
           <svg
+            class="whatIDo"
             xmlns="http://www.w3.org/2000/svg"
             width="490.0075317382812px"
             height="124.4224853515625px"
@@ -206,7 +207,7 @@
 
         <div
           class="-skew-x-12 p-4 prose text-xl text-white z-20 absolute top-4 right-8 w-1/2 transform -rotate-3 bg-carrot-400 rounded-2xl border-red-400 border-2 shadow-md not-italic">
-          <span class=""> Full-stack development, primarily Typescript/Javascript</span>
+          <span>Full Stack Development (mostly Typescript/Javascript)</span>
         </div>
       </div>
 

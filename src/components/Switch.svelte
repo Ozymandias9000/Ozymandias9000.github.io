@@ -46,5 +46,6 @@
     <div class="track" />
     <div class="thumb" />
   </div>
-  <span class="ml-2 cursor-pointer transition-colors duration-2000 {checked ? 'text-white' : ''}">{text}</span>
+  <span
+    class="ml-2 cursor-pointer transition-colors duration-2000 {checked ? 'text-white' : 'text-black'}">{text}</span>
 </label>
