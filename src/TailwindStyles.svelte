@@ -15,10 +15,6 @@
       overflow: hidden;
     }
 
-    span {
-      @apply text-white;
-    }
-
     a,
     button {
       @apply text-gray-500;

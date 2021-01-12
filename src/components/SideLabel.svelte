@@ -1,6 +1,5 @@
 <style lang="scss">
   .positioning {
-    top: 20px;
     left: -100px;
     text-decoration: underline;
     text-decoration-thickness: from-font;
@@ -11,11 +10,13 @@
 
 <script>
   export let label
+  export let down
+  export let checked
 </script>
 
 <div class="relative">
   <h2
-    class="prose text-2xl text-white block bold tracking-tighter text-chocolate-200 transform -rotate-90 w-28  positioning absolute">
+    class="prose text-2xl text-white block bold tracking-tighter {down ? `top-${down}` : 'top-0'} {checked ? `text-chocolate-200` : `text-chocolate-700`} transform -rotate-90 w-28  positioning absolute whitespace-nowrap">
     {label}
   </h2>
 </div>
