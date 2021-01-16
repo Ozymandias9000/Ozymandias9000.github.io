@@ -79,14 +79,14 @@
             <h1
               class="prose font-serif {mobile ? 'text-md' : 'text-2xl'} fixed {checked
                 ? 'text-white'
-                : ''} tracking-wide top-{mobile ? '2' : '1'} z-50"
+                : ''} tracking-wide {mobile ? 'top-2' : 'top-1'} z-50"
             >~ nick murphy ~</h1>
           {/if}
         </IntersectionObs>
         <h1
           class="prose font-serif {mobile ? 'text-md' : 'text-2xl'} sticky {checked
             ? 'text-white'
-            : ''} tracking-wide top-{mobile ? '2' : '1'}"
+            : ''} tracking-wide{mobile ? 'top-2' : 'top-1'}"
         >~ nick murphy ~</h1>
 
         <select

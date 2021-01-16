@@ -29,7 +29,7 @@
     <svg
       class="neon"
       xmlns="http://www.w3.org/2000/svg"
-      width={mobile ? '400px' : '490.0075317382812px'}
+      width={mobile ? '380px' : '490.0075317382812px'}
       height="124.4224853515625px"
       viewBox="4.996234130859392 12.78875732421875 490.0075317382812 124.4224853515625"
       preserveAspectRatio="xMidYMid"
