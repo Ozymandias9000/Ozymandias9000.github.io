@@ -7,6 +7,10 @@
 
       top: 0.5rem;
 
+      @media only screen and (max-width: 767px) {
+        width: 360px;
+      }
+
       .svgBox {
         height: 200px;
         svg {
@@ -19,7 +23,7 @@
         @media only screen and (max-width: 767px) {
           top: 140px;
 
-          right: 128px;
+          right: 20px;
         }
       }
     }
@@ -54,7 +58,7 @@
     <svg
       class="neon"
       xmlns="http://www.w3.org/2000/svg"
-      width={mobile ? '400px' : '490.0075317382812px'}
+      width={mobile ? '350px' : '490.0075317382812px'}
       height="124.4224853515625px"
       viewBox="4.996234130859392 12.78875732421875 490.0075317382812 124.4224853515625"
       preserveAspectRatio="xMidYMid"
