@@ -1,6 +1,10 @@
 <style lang="scss">
   .clip-odd {
     clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
+
+    @media only screen and (max-width: 1000px) {
+      clip-path: polygon(0 0, 100% 7%, 100% 93%, 0 100%);
+    }
   }
 
   span {
@@ -28,11 +32,16 @@
 </script>
 
 <div
-  class="transition-colors duration-2000 {checked ? 'bg-pacific-800' : 'bg-pacific-100'} relative w-full p-40 pt-68 pb-68 clip-odd flex flex-col items-center justify-center">
-  <div class="pr-44 pl-44">
-    <div class="mb-10">
-      <span class="prose prose-lg {checked ? 'text-white' : ''}  ">Currently at
-        <a href="https://www.minutemedia.com/" target="_blank">Minute Media</a>.</span>
+  class="transition-colors duration-2000 {checked
+    ? 'bg-pacific-800'
+    : 'bg-pacific-100'} relative w-full p-40 pt-68 pb-68 clip-odd flex flex-col items-center justify-center"
+>
+  <div class="md:pr-44 md:pl-44 p-0 md:w-auto w-56">
+    <div class="mb-10 md:mt-0 mt-8">
+      <span class="prose prose-lg {checked ? 'text-white' : ''}  "
+        >Currently at
+        <a href="https://www.minutemedia.com/" target="_blank">Minute Media</a>.</span
+      >
     </div>
 
     <div class="prose prose-lg font-bold {checked ? 'text-white' : ''}  mb-2">I solve problems.</div>
@@ -58,7 +67,7 @@
     <div class="prose prose-lg {checked ? 'text-white' : ''}  mb-10">
       <span> Service to crawl unstructured content and transform into structured JSON </span>
 
-      <div class="mt-2 grid grid-cols-8">
+      <div class="mt-4 grid grid-cols-4 md:grid-cols-8 gap-8">
         <Ts />
         <React />
         <Express {checked} />
@@ -73,7 +82,7 @@
     <div class="prose prose-lg {checked ? 'text-white' : ''}  mb-10">
       <span>Users + payments management service </span>
 
-      <div class="mt-2 grid grid-cols-8">
+      <div class="mt-4 grid grid-cols-4 md:grid-cols-8 gap-8">
         <Ts />
         <React />
         <Express {checked} />
@@ -87,7 +96,7 @@
     <div class="prose prose-lg {checked ? 'text-white' : ''}  mb-10">
       <span> New front-end for CMS </span>
 
-      <div class="mt-2 grid grid-cols-8">
+      <div class="mt-4 grid grid-cols-4 md:grid-cols-8 gap-8">
         <Js />
         <React />
         <Express {checked} />
@@ -99,7 +108,7 @@
     <h4 class="font-serif font-bold uppercase text-orchid-300 tracking-wider">UI Framework</h4>
     <div class="prose prose-lg {checked ? 'text-white' : ''}  mb-16">
       <span> UI component library </span>
-      <div class="mt-2 grid grid-cols-8">
+      <div class="mt-4 grid grid-cols-4 md:grid-cols-8 gap-8">
         <Js />
         <React />
       </div>
@@ -109,7 +118,7 @@
     <div class="prose prose-lg {checked ? 'text-white' : ''}  mb-20">
       <span> Things I'm keeping an eye on. </span>
       <ul>
-        <li>Worked a little in Rust + Go. Interested in learning more.</li>
+        <li>Worked a little in Go. Interested in learning more.</li>
         <li>Terraform</li>
         <li>Svelte + Snowpack</li>
         <li>Deno</li>

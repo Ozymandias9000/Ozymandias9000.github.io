@@ -26,7 +26,18 @@
   let checked = true
   let scrollContainer
   let projectsAnchor
+  let windowWidth
+
+  $: mobile = windowWidth < 768
+  //   $: tablet = windowWidth < 1000 && windowWidth > 768
+  $: desktop = windowWidth >= 1000
+  //   $: {
+  //     console.log(windowWidth)
+  //     console.log(mobile)
+  //   }
 </script>
+
+<svelte:window bind:innerWidth={windowWidth} />
 
 <div class="scrollContainer transition-colors duration-2000" bind:this={scrollContainer}>
   <section class="h-1/2">
@@ -34,23 +45,26 @@
 
     <div class="container relative h-screen">
       <div class="fixed top-2 right-4 z-50">
-        <Codepen {checked} />
-        <Github {checked} />
-        <button
-          on:click={() => projectsAnchor.scrollIntoView({ behavior: 'smooth' })}
-          class="prose pr-8 cursor-pointer transform transition-colors duration-2000 {checked
-            ? 'text-white hover:text-gray-400'
-            : ''}">What I Do</button
-        >
-        <button
-          on:click={() => scrollContainer.scrollTo({ top: scrollContainer.scrollHeight, left: 0, behavior: 'smooth' })}
-          class="prose pr-8 cursor-pointer transform transition-colors duration-2000 {checked
-            ? 'text-white hover:text-gray-400'
-            : ''}">Contact Me</button
-        >
+        <Codepen {checked} {mobile} />
+        <Github {checked} {mobile} />
+        {#if desktop}
+          <button
+            on:click={() => projectsAnchor.scrollIntoView({ behavior: 'smooth' })}
+            class="prose pr-8 cursor-pointer transform transition-colors duration-2000 {checked
+              ? 'text-white hover:text-gray-400'
+              : ''}">What I Do</button
+          >
+          <button
+            on:click={() =>
+              scrollContainer.scrollTo({ top: scrollContainer.scrollHeight, left: 0, behavior: 'smooth' })}
+            class="prose pr-8 cursor-pointer transform transition-colors duration-2000 {checked
+              ? 'text-white hover:text-gray-400'
+              : ''}">Contact Me</button
+          >
+        {/if}
       </div>
       <div class="fixed top-2 left-4 z-50">
-        <Switch text={checked ? 'Night' : 'Day'} id="toggle" bind:checked />
+        <Switch text={!mobile ? (checked ? 'Night' : 'Day') : ''} id="toggle" bind:checked />
       </div>
       <div class="flex flex-col justify-center items-center h-3/5">
         <IntersectionObs let:intersecting top={0}>
@@ -62,14 +76,18 @@
                 ? 'bg-pacific-700'
                 : 'bg-pacific-100'}  opacity-95 h-12 w-full pointer-events-none z-40"
             />
-            <h1 class="prose font-serif text-2xl fixed {checked ? 'text-white' : ''} tracking-wide top-1 z-50">
-              ~ nick murphy ~
-            </h1>
+            <h1
+              class="prose font-serif {mobile ? 'text-md' : 'text-2xl'} fixed {checked
+                ? 'text-white'
+                : ''} tracking-wide top-{mobile ? '2' : '1'} z-50"
+            >~ nick murphy ~</h1>
           {/if}
         </IntersectionObs>
-        <h1 class="prose font-serif text-2xl sticky {checked ? 'text-white' : ''} tracking-wide top-1">
-          ~ nick murphy ~
-        </h1>
+        <h1
+          class="prose font-serif {mobile ? 'text-md' : 'text-2xl'} sticky {checked
+            ? 'text-white'
+            : ''} tracking-wide top-{mobile ? '2' : '1'}"
+        >~ nick murphy ~</h1>
 
         <select
           style="text-align-last: center;"
@@ -115,7 +133,7 @@
 
   <section class="bg-denim-300" bind:this={projectsAnchor}>
     <div class="flex flex-col justify-center items-center h-full relative">
-      <WhatIDo />
+      <WhatIDo {mobile} />
 
       <WhatIDoContent {checked} />
     </div>
@@ -123,7 +141,7 @@
 
   <section class="bg-denim-300" style="height:400px">
     <div class="flex flex-col justify-center items-center h-full relative">
-      <ContactMe />
+      <ContactMe {mobile} />
 
       <ContactForm />
     </div>
