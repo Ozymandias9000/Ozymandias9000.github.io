@@ -4,21 +4,21 @@
       "bytes": 97,
       "imports": []
     },
-    "_snowpack/pkg/common/index-cef5dd5d.js": {
-      "bytes": 10819,
+    "_snowpack/pkg/common/index-8f894e08.js": {
+      "bytes": 10845,
       "imports": []
     },
     "_snowpack/pkg/svelte/internal.js": {
-      "bytes": 492,
+      "bytes": 518,
       "imports": [
         {
-          "path": "_snowpack/pkg/common/index-cef5dd5d.js",
+          "path": "_snowpack/pkg/common/index-8f894e08.js",
           "kind": "import-statement"
         }
       ]
     },
     "dist/TailwindStyles.svelte.css": {
-      "bytes": 19910,
+      "bytes": 20297,
       "imports": []
     },
     "dist/TailwindStyles.svelte.js": {
@@ -39,7 +39,7 @@
       "imports": []
     },
     "dist/components/ContactForm.svelte.js": {
-      "bytes": 1441,
+      "bytes": 1499,
       "imports": [
         {
           "path": "_snowpack/pkg/svelte/internal.js",
@@ -52,7 +52,7 @@
       "imports": []
     },
     "dist/components/ContactMe.svelte.js": {
-      "bytes": 9280,
+      "bytes": 11152,
       "imports": [
         {
           "path": "dist/components/ContactMe.svelte.css",
@@ -95,7 +95,7 @@
       ]
     },
     "dist/components/icons/Codepen.svelte.js": {
-      "bytes": 2541,
+      "bytes": 3198,
       "imports": [
         {
           "path": "_snowpack/pkg/svelte/internal.js",
@@ -104,7 +104,7 @@
       ]
     },
     "dist/components/icons/Github.svelte.js": {
-      "bytes": 3711,
+      "bytes": 4390,
       "imports": [
         {
           "path": "_snowpack/pkg/svelte/internal.js",
@@ -116,7 +116,7 @@
       "bytes": 59,
       "imports": [
         {
-          "path": "_snowpack/pkg/common/index-cef5dd5d.js",
+          "path": "_snowpack/pkg/common/index-8f894e08.js",
           "kind": "import-statement"
         }
       ]
@@ -186,11 +186,11 @@
       ]
     },
     "dist/components/WhatIDo.svelte.css": {
-      "bytes": 768,
+      "bytes": 1257,
       "imports": []
     },
     "dist/components/WhatIDo.svelte.js": {
-      "bytes": 5719,
+      "bytes": 8281,
       "imports": [
         {
           "path": "dist/components/WhatIDo.svelte.css",
@@ -203,7 +203,7 @@
       ]
     },
     "dist/components/WhatIDoContent.svelte.css": {
-      "bytes": 176,
+      "bytes": 355,
       "imports": []
     },
     "dist/components/icons/AWS.svelte.js": {
@@ -323,7 +323,7 @@
       ]
     },
     "dist/components/WhatIDoContent.svelte.js": {
-      "bytes": 18803,
+      "bytes": 18927,
       "imports": [
         {
           "path": "dist/components/WhatIDoContent.svelte.css",
@@ -384,7 +384,7 @@
       ]
     },
     "dist/components/FrontPage.svelte.js": {
-      "bytes": 19258,
+      "bytes": 22485,
       "imports": [
         {
           "path": "dist/components/FrontPage.svelte.css",
@@ -481,7 +481,7 @@
         "_snowpack/env.js": {
           "bytesInOutput": 100
         },
-        "_snowpack/pkg/common/index-cef5dd5d.js": {
+        "_snowpack/pkg/common/index-8f894e08.js": {
           "bytesInOutput": 3862
         },
         "_snowpack/pkg/svelte/internal.js": {
@@ -494,28 +494,28 @@
           "bytesInOutput": 0
         },
         "dist/components/ContactForm.svelte.js": {
-          "bytesInOutput": 947
+          "bytesInOutput": 1007
         },
         "dist/components/ContactMe.svelte.css": {
           "bytesInOutput": 0
         },
         "dist/components/ContactMe.svelte.js": {
-          "bytesInOutput": 8717
+          "bytesInOutput": 9186
         },
         "dist/components/Footer.svelte.css": {
           "bytesInOutput": 0
         },
         "dist/components/icons/Svelte.svelte.js": {
-          "bytesInOutput": 1704
+          "bytesInOutput": 1706
         },
         "dist/components/Footer.svelte.js": {
-          "bytesInOutput": 499
+          "bytesInOutput": 501
         },
         "dist/components/icons/Codepen.svelte.js": {
-          "bytesInOutput": 1604
+          "bytesInOutput": 1815
         },
         "dist/components/icons/Github.svelte.js": {
-          "bytesInOutput": 2658
+          "bytesInOutput": 2884
         },
         "_snowpack/pkg/svelte.js": {
           "bytesInOutput": 0
@@ -533,7 +533,7 @@
           "bytesInOutput": 0
         },
         "dist/components/ProfPic.svelte.js": {
-          "bytesInOutput": 334
+          "bytesInOutput": 336
         },
         "dist/components/Switch.svelte.css": {
           "bytesInOutput": 0
@@ -545,7 +545,7 @@
           "bytesInOutput": 0
         },
         "dist/components/WhatIDo.svelte.js": {
-          "bytesInOutput": 5178
+          "bytesInOutput": 6036
         },
         "dist/components/WhatIDoContent.svelte.css": {
           "bytesInOutput": 0
@@ -554,34 +554,34 @@
           "bytesInOutput": 4454
         },
         "dist/components/icons/Docker.svelte.js": {
-          "bytesInOutput": 5266
+          "bytesInOutput": 5268
         },
         "dist/components/icons/Dynamo.svelte.js": {
-          "bytesInOutput": 1764
+          "bytesInOutput": 1766
         },
         "dist/components/icons/Express.svelte.js": {
           "bytesInOutput": 1410
         },
         "dist/components/icons/Jest.svelte.js": {
-          "bytesInOutput": 225982
+          "bytesInOutput": 225984
         },
         "dist/components/icons/JS.svelte.js": {
-          "bytesInOutput": 1366
+          "bytesInOutput": 1368
         },
         "dist/components/icons/MaterialUI.svelte.js": {
-          "bytesInOutput": 679
+          "bytesInOutput": 681
         },
         "dist/components/icons/Mongo.svelte.js": {
-          "bytesInOutput": 6532
+          "bytesInOutput": 6534
         },
         "dist/components/icons/MySQL.svelte.js": {
           "bytesInOutput": 3216
         },
         "dist/components/icons/React.svelte.js": {
-          "bytesInOutput": 2649
+          "bytesInOutput": 2651
         },
         "dist/components/icons/TS.svelte.js": {
-          "bytesInOutput": 1294
+          "bytesInOutput": 1296
         },
         "dist/components/SideLabel.svelte.css": {
           "bytesInOutput": 0
@@ -590,25 +590,25 @@
           "bytesInOutput": 934
         },
         "dist/components/WhatIDoContent.svelte.js": {
-          "bytesInOutput": 8034
+          "bytesInOutput": 8152
         },
         "dist/components/FrontPage.svelte.js": {
-          "bytesInOutput": 8712
+          "bytesInOutput": 9720
         },
         "dist/App.svelte.js": {
-          "bytesInOutput": 601
+          "bytesInOutput": 603
         },
         "dist/index.js": {
           "bytesInOutput": 64
         }
       },
-      "bytes": 303324
+      "bytes": 306298
     },
     "../~~bundle~~/dist/index.css": {
       "imports": [],
       "inputs": {
         "dist/TailwindStyles.svelte.css": {
-          "bytesInOutput": 19525
+          "bytesInOutput": 19910
         },
         "dist/components/FrontPage.svelte.css": {
           "bytesInOutput": 90
@@ -629,16 +629,16 @@
           "bytesInOutput": 896
         },
         "dist/components/WhatIDo.svelte.css": {
-          "bytesInOutput": 763
+          "bytesInOutput": 1251
         },
         "dist/components/WhatIDoContent.svelte.css": {
-          "bytesInOutput": 170
+          "bytesInOutput": 343
         },
         "dist/components/SideLabel.svelte.css": {
           "bytesInOutput": 150
         }
       },
-      "bytes": 26191
+      "bytes": 27237
     }
   }
 }
