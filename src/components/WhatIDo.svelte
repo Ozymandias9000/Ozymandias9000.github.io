@@ -16,7 +16,7 @@
       .desc {
         top: 120px;
         right: 25px;
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 767px) {
           top: 140px;
 
           right: 128px;
@@ -88,6 +88,6 @@
     class="-skew-x-12 p-4 prose prose-lg text-white z-20 absolute top-4 right-8 transform -rotate-3 bg-carrot-400 rounded-2xl border-red-400 border-2 shadow-md text-center font-bold desc {mobile &&
       'w-80'}"
   >
-    <span>Full Stack Development (mostly Typescript/React/Express)</span>
+    <span class="md:whitespace-nowrap">Full Stack Development (mostly Typescript/React/Express)</span>
   </div>
 </div>
