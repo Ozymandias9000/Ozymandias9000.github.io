@@ -18,7 +18,7 @@
       ]
     },
     "dist/TailwindStyles.svelte.css": {
-      "bytes": 20316,
+      "bytes": 20353,
       "imports": []
     },
     "dist/TailwindStyles.svelte.js": {
@@ -186,11 +186,11 @@
       ]
     },
     "dist/components/WhatIDo.svelte.css": {
-      "bytes": 1257,
+      "bytes": 1392,
       "imports": []
     },
     "dist/components/WhatIDo.svelte.js": {
-      "bytes": 8281,
+      "bytes": 8276,
       "imports": [
         {
           "path": "dist/components/WhatIDo.svelte.css",
@@ -384,7 +384,7 @@
       ]
     },
     "dist/components/FrontPage.svelte.js": {
-      "bytes": 22499,
+      "bytes": 22788,
       "imports": [
         {
           "path": "dist/components/FrontPage.svelte.css",
@@ -545,7 +545,7 @@
           "bytesInOutput": 0
         },
         "dist/components/WhatIDo.svelte.js": {
-          "bytesInOutput": 6036
+          "bytesInOutput": 6031
         },
         "dist/components/WhatIDoContent.svelte.css": {
           "bytesInOutput": 0
@@ -590,10 +590,10 @@
           "bytesInOutput": 934
         },
         "dist/components/WhatIDoContent.svelte.js": {
-          "bytesInOutput": 8152
+          "bytesInOutput": 8159
         },
         "dist/components/FrontPage.svelte.js": {
-          "bytesInOutput": 9734
+          "bytesInOutput": 9850
         },
         "dist/App.svelte.js": {
           "bytesInOutput": 603
@@ -602,13 +602,13 @@
           "bytesInOutput": 64
         }
       },
-      "bytes": 306312
+      "bytes": 306430
     },
     "../~~bundle~~/dist/index.css": {
       "imports": [],
       "inputs": {
         "dist/TailwindStyles.svelte.css": {
-          "bytesInOutput": 19928
+          "bytesInOutput": 19965
         },
         "dist/components/FrontPage.svelte.css": {
           "bytesInOutput": 90
@@ -629,7 +629,7 @@
           "bytesInOutput": 896
         },
         "dist/components/WhatIDo.svelte.css": {
-          "bytesInOutput": 1251
+          "bytesInOutput": 1386
         },
         "dist/components/WhatIDoContent.svelte.css": {
           "bytesInOutput": 343
@@ -638,7 +638,7 @@
           "bytesInOutput": 150
         }
       },
-      "bytes": 27255
+      "bytes": 27427
     }
   }
 }
