@@ -3,7 +3,7 @@
     clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
 
     @media only screen and (max-width: 1000px) {
-      clip-path: polygon(0 0, 100% 7%, 100% 93%, 0 100%);
+      clip-path: polygon(0 0, 100% 7%, 100% 86%, 0 95%);
     }
   }
 

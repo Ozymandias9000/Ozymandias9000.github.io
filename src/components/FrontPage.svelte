@@ -66,7 +66,7 @@
       <div class="fixed top-2 left-4 z-50">
         <Switch text={!mobile ? (checked ? 'Night' : 'Day') : ''} id="toggle" bind:checked />
       </div>
-      <div class="flex flex-col justify-center items-center h-3/5">
+      <div class="flex flex-col justify-center items-center h-3/5 m-8">
         <IntersectionObs let:intersecting top={0}>
           <ProfPic />
 
@@ -114,7 +114,7 @@
       </div>
     </div>
   </section>
-  <section class="relative">
+  <section class="relative {mobile ? 'top-12' : ''}">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
       ><path
         class="transition-colors duration-2000"
@@ -132,7 +132,7 @@
     >
   </section>
 
-  <section class="bg-denim-300" bind:this={projectsAnchor}>
+  <section class="bg-denim-300 {mobile ? 'relative top-12' : ''}" bind:this={projectsAnchor}>
     <div class="flex flex-col justify-center items-center h-full relative">
       <WhatIDo {mobile} />
 
