@@ -1,7 +1,12 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  purge: ['./src/**/*.svelte'],
+  purge: {
+    content: ['./src/**/*.svelte'],
+    options: {
+      safelist: ['top-6', 'top-26'],
+    },
+  },
   theme: {
     screens: {
       sm: '640px',

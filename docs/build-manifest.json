@@ -18,7 +18,7 @@
       ]
     },
     "dist/TailwindStyles.svelte.css": {
-      "bytes": 20387,
+      "bytes": 20424,
       "imports": []
     },
     "dist/TailwindStyles.svelte.js": {
@@ -608,7 +608,7 @@
       "imports": [],
       "inputs": {
         "dist/TailwindStyles.svelte.css": {
-          "bytesInOutput": 19999
+          "bytesInOutput": 20036
         },
         "dist/components/FrontPage.svelte.css": {
           "bytesInOutput": 90
@@ -638,7 +638,7 @@
           "bytesInOutput": 150
         }
       },
-      "bytes": 27459
+      "bytes": 27496
     }
   }
 }
