@@ -441,7 +441,7 @@
       ]
     },
     "dist/App.svelte.js": {
-      "bytes": 1675,
+      "bytes": 1999,
       "imports": [
         {
           "path": "_snowpack/pkg/svelte/internal.js",
@@ -596,13 +596,13 @@
           "bytesInOutput": 10069
         },
         "dist/App.svelte.js": {
-          "bytesInOutput": 603
+          "bytesInOutput": 765
         },
         "dist/index.js": {
           "bytesInOutput": 64
         }
       },
-      "bytes": 306642
+      "bytes": 306804
     },
     "../~~bundle~~/dist/index.css": {
       "imports": [],
