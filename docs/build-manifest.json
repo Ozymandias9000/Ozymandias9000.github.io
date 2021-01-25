@@ -18,7 +18,7 @@
       ]
     },
     "dist/TailwindStyles.svelte.css": {
-      "bytes": 20424,
+      "bytes": 20799,
       "imports": []
     },
     "dist/TailwindStyles.svelte.js": {
@@ -39,7 +39,7 @@
       "imports": []
     },
     "dist/components/ContactForm.svelte.js": {
-      "bytes": 1499,
+      "bytes": 1609,
       "imports": [
         {
           "path": "_snowpack/pkg/svelte/internal.js",
@@ -156,7 +156,7 @@
       "imports": []
     },
     "dist/components/ProfPic.svelte.js": {
-      "bytes": 927,
+      "bytes": 929,
       "imports": [
         {
           "path": "dist/components/ProfPic.svelte.css",
@@ -494,7 +494,7 @@
           "bytesInOutput": 0
         },
         "dist/components/ContactForm.svelte.js": {
-          "bytesInOutput": 1007
+          "bytesInOutput": 1117
         },
         "dist/components/ContactMe.svelte.css": {
           "bytesInOutput": 0
@@ -533,7 +533,7 @@
           "bytesInOutput": 0
         },
         "dist/components/ProfPic.svelte.js": {
-          "bytesInOutput": 336
+          "bytesInOutput": 423
         },
         "dist/components/Switch.svelte.css": {
           "bytesInOutput": 0
@@ -602,13 +602,13 @@
           "bytesInOutput": 64
         }
       },
-      "bytes": 306804
+      "bytes": 307001
     },
     "../~~bundle~~/dist/index.css": {
       "imports": [],
       "inputs": {
         "dist/TailwindStyles.svelte.css": {
-          "bytesInOutput": 20036
+          "bytesInOutput": 20402
         },
         "dist/components/FrontPage.svelte.css": {
           "bytesInOutput": 90
@@ -638,7 +638,7 @@
           "bytesInOutput": 150
         }
       },
-      "bytes": 27496
+      "bytes": 27862
     }
   }
 }

@@ -35,4 +35,8 @@
   }
 </style>
 
-<img class="profPic rounded-full mb-2 shadow-md" src="assets/prof.jpg" alt="My face" height="150" width="150" />
+<picture>
+  <source type="image/avif" srcSet="assets/prof.avif" />
+  <source type="image/webp" srcSet="assets/prof.webp" />
+  <img class="profPic rounded-full mb-2 shadow-md" src="assets/prof.jpg" alt="My face" height="150" width="150" />
+</picture>
