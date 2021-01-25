@@ -243,7 +243,7 @@
       ]
     },
     "dist/components/icons/Jest.svelte.js": {
-      "bytes": 227119,
+      "bytes": 6455,
       "imports": [
         {
           "path": "_snowpack/pkg/svelte/internal.js",
@@ -563,7 +563,7 @@
           "bytesInOutput": 1410
         },
         "dist/components/icons/Jest.svelte.js": {
-          "bytesInOutput": 225984
+          "bytesInOutput": 5734
         },
         "dist/components/icons/JS.svelte.js": {
           "bytesInOutput": 1368
@@ -602,7 +602,7 @@
           "bytesInOutput": 64
         }
       },
-      "bytes": 307001
+      "bytes": 86751
     },
     "../~~bundle~~/dist/index.css": {
       "imports": [],
