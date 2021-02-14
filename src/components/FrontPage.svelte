@@ -39,9 +39,12 @@
 
 <svelte:window bind:innerWidth={windowWidth} />
 
-<div class="scrollContainer transition-colors duration-2000 overflow-x-hidden" bind:this={scrollContainer}>
+<div
+  class="scrollContainer {checked ? 'bg-gray-800' : 'bg-blue-100'} transition-colors duration-2000 overflow-x-hidden"
+  bind:this={scrollContainer}
+>
   <section class="h-1/2">
-    <TopSvgContainer {checked} />
+    <!-- <TopSvgContainer {checked} /> -->
 
     <div class="container relative h-screen">
       <div class="fixed top-2 right-4 z-50">
@@ -73,27 +76,32 @@
           {#if !intersecting}
             <div
               class="fixed top-0 right-0 transform transition-colors duration-2000 {checked
-                ? 'bg-pacific-700'
-                : 'bg-pacific-100'}  opacity-95 h-12 w-full pointer-events-none z-40"
+                ? 'bg-gray-800'
+                : 'bg-blue-100'}  opacity-95 h-12 w-full pointer-events-none z-40"
             />
             <h1
               class="prose font-serif {mobile ? 'text-md' : 'text-2xl'} fixed {checked
                 ? 'text-white'
                 : ''} tracking-wide {mobile ? 'top-2' : 'top-1'} z-50"
-            >~ nick murphy ~</h1>
+            >
+              ~ nick murphy ~
+            </h1>
           {/if}
         </IntersectionObs>
         <h1
           class="prose font-serif {mobile ? 'text-md' : 'text-2xl'} sticky {checked
             ? 'text-white'
             : ''} tracking-wide{mobile ? 'top-2' : 'top-1'}"
-        >~ nick murphy ~</h1>
+        >
+          ~ nick murphy ~
+        </h1>
 
         <select
           style="text-align-last: center;"
           class="prose duration-1000 w-30 {checked ? 'text-white bg-black' : ''}"
           name="adverbs"
-          selected="skilled">
+          selected="skilled"
+        >
           <option value="wildly">wildly</option>
           <option value="passionately">passionately</option>
           <option value="consistently">consistently</option>
@@ -103,7 +111,8 @@
           style="text-align-last: center;"
           class="prose duration-1000 w-30 {checked ? 'text-white bg-black' : ''}"
           name="adjectives"
-          selected="skilled">
+          selected="skilled"
+        >
           <option value="skilled">skilled</option>
           <option value="enthusiastic">enthusiastic</option>
           <option value="involved">involved</option>

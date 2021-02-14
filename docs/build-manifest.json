@@ -18,7 +18,7 @@
       ]
     },
     "dist/TailwindStyles.svelte.css": {
-      "bytes": 20799,
+      "bytes": 20885,
       "imports": []
     },
     "dist/TailwindStyles.svelte.js": {
@@ -323,7 +323,7 @@
       ]
     },
     "dist/components/WhatIDoContent.svelte.js": {
-      "bytes": 18927,
+      "bytes": 18915,
       "imports": [
         {
           "path": "dist/components/WhatIDoContent.svelte.css",
@@ -384,7 +384,7 @@
       ]
     },
     "dist/components/FrontPage.svelte.js": {
-      "bytes": 23401,
+      "bytes": 23202,
       "imports": [
         {
           "path": "dist/components/FrontPage.svelte.css",
@@ -526,9 +526,6 @@
         "dist/components/TopSvgContainer.svelte.css": {
           "bytesInOutput": 0
         },
-        "dist/components/TopSvgContainer.svelte.js": {
-          "bytesInOutput": 1968
-        },
         "dist/components/ProfPic.svelte.css": {
           "bytesInOutput": 0
         },
@@ -590,10 +587,10 @@
           "bytesInOutput": 934
         },
         "dist/components/WhatIDoContent.svelte.js": {
-          "bytesInOutput": 8152
+          "bytesInOutput": 8141
         },
         "dist/components/FrontPage.svelte.js": {
-          "bytesInOutput": 10069
+          "bytesInOutput": 10087
         },
         "dist/App.svelte.js": {
           "bytesInOutput": 765
@@ -602,13 +599,13 @@
           "bytesInOutput": 64
         }
       },
-      "bytes": 86751
+      "bytes": 84790
     },
     "../~~bundle~~/dist/index.css": {
       "imports": [],
       "inputs": {
         "dist/TailwindStyles.svelte.css": {
-          "bytesInOutput": 20402
+          "bytesInOutput": 20485
         },
         "dist/components/FrontPage.svelte.css": {
           "bytesInOutput": 90
@@ -638,7 +635,7 @@
           "bytesInOutput": 150
         }
       },
-      "bytes": 27862
+      "bytes": 27945
     }
   }
 }

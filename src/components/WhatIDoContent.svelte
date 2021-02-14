@@ -34,7 +34,7 @@
 <div
   class="transition-colors duration-2000 {checked
     ? 'bg-pacific-800'
-    : 'bg-pacific-100'} relative w-full p-40 pt-68 pb-68 clip-odd flex flex-col items-center justify-center"
+    : 'bg-white'} relative w-full p-40 pt-68 pb-68 clip-odd flex flex-col items-center justify-center"
 >
   <div class="md:pr-44 md:pl-44 p-0 md:w-auto w-56">
     <div class="mb-10 md:mt-0 mt-8">
