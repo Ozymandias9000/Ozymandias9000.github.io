@@ -40,7 +40,7 @@
     <div class="mb-10 md:mt-0 mt-8">
       <span class="prose prose-lg {checked ? 'text-white' : ''}  "
         >Currently at
-        <a href="https://www.minutemedia.com/" target="_blank">Minute Media</a>.</span
+        <a href="https://www.bolt.com/" target="_blank">Bolt</a>.</span
       >
     </div>
 
@@ -53,19 +53,18 @@
     </div>
 
     <div class="prose prose-lg font-bold {checked ? 'text-white' : ''}  mb-10">
-      And I write performant, testable, readable code.
+      And I write performant, testable, human-readable code.
     </div>
 
     <div class="prose prose-lg {checked ? 'text-white' : ''}  mb-16">
-      I've worked (and taken lead) on a number of projects that can't be shown here. However, I can provide a general
-      sample of what I've done.
+      I've worked on (and led) a number of projects that can't be shown here. Here's a sample of what I've done.
     </div>
 
     <SideLabel {checked} label="Projects" down={6} />
 
     <h4 class="font-serif font-bold uppercase text-orchid-300 tracking-wider">Content Import</h4>
     <div class="prose prose-lg {checked ? 'text-white' : ''}  mb-10">
-      <span> Service to crawl unstructured content and transform into structured JSON </span>
+      <span> Crawl unstructured content and transform into structured JSON </span>
 
       <div class="mt-4 grid grid-cols-4 md:grid-cols-8 gap-8">
         <Ts />
@@ -94,7 +93,7 @@
 
     <h4 class="font-serif font-bold uppercase text-orchid-300 tracking-wider">Front-end Redesign</h4>
     <div class="prose prose-lg {checked ? 'text-white' : ''}  mb-10">
-      <span> New front-end for CMS </span>
+      <span> New frontend for CMS </span>
 
       <div class="mt-4 grid grid-cols-4 md:grid-cols-8 gap-8">
         <Js />
@@ -105,10 +104,11 @@
       </div>
     </div>
 
-    <h4 class="font-serif font-bold uppercase text-orchid-300 tracking-wider">UI Framework</h4>
+    <h4 class="font-serif font-bold uppercase text-orchid-300 tracking-wider">UI Component Libraries</h4>
     <div class="prose prose-lg {checked ? 'text-white' : ''}  mb-16">
-      <span> UI component library </span>
+      <span> Worked on several component libraries </span>
       <div class="mt-4 grid grid-cols-4 md:grid-cols-8 gap-8">
+        <Ts />
         <Js />
         <React />
       </div>
@@ -116,12 +116,12 @@
 
     <SideLabel {checked} label="Other Interests" down={26} />
     <div class="prose prose-lg {checked ? 'text-white' : ''}  mb-20">
-      <span> Things I'm keeping an eye on. </span>
+      <span> Things I'm keeping an eye on: </span>
       <ul>
-        <li>Worked a little in Go. Interested in learning more.</li>
+        <li>Rust</li>
         <li>Terraform</li>
-        <li>Svelte + Snowpack</li>
-        <li>Deno</li>
+        <li>Svelte</li>
+        <li>Bun</li>
       </ul>
     </div>
   </div>
