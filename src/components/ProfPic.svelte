@@ -24,14 +24,14 @@
   }
 
   .profPic {
-    transition: all 0.8s;
-    animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
-    animation: wiggle 0.7s infinite;
-    animation-play-state: paused;
+    // transition: all 0.8s;
+    // animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+    // animation: wiggle 0.7s infinite;
+    // animation-play-state: paused;
 
-    &:hover {
-      animation-play-state: running;
-    }
+    // &:hover {
+    //   animation-play-state: running;
+    // }
   }
 </style>
 
