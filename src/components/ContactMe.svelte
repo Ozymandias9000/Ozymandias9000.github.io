@@ -25,7 +25,7 @@
 </script>
 
 <div class="absolute z-10 md:w-118 w-88" style="top:-15rem">
-  <div class="transform skew-x-12 rotate-3 bg-royalblue-800 rounded-2xl shadow-2xl">
+  <div class="bg-royalblue-800 rounded-2xl shadow-2xl">
     <svg
       class="neon"
       xmlns="http://www.w3.org/2000/svg"

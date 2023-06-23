@@ -9,10 +9,10 @@
       --color-grey: #ded;
 
       font-size: 17px;
-      min-height: 100vh;
-      margin: 0;
+    //   min-height: 100vh;
+    //   margin: 0;
       background: #fdfdf0;
-      overflow: hidden;
+    //   overflow: hidden;
     }
 
     a,

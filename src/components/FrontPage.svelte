@@ -1,9 +1,12 @@
 <style lang="scss">
   .scrollContainer {
     font-family: 'IBM Plex Sans';
-    height: 100vh;
 
-    overflow-y: scroll;
+    overflow-y: hidden;
+  }
+
+  .profileBox {
+    min-height: 575px;
   }
 </style>
 
@@ -12,7 +15,7 @@
   import ContactMe from './ContactMe.svelte'
   import Footer from './Footer.svelte'
 
-  import Codepen from './icons/Codepen.svelte'
+  //   import Codepen from './icons/Codepen.svelte'
   import Github from './icons/Github.svelte'
 
   import IntersectionObs from './IntersectionObs.svelte'
@@ -26,6 +29,7 @@
   let checked = true
   let scrollContainer
   let projectsAnchor
+  let contactAnchor
   let windowWidth
 
   $: mobile = windowWidth < 768
@@ -46,10 +50,9 @@
   <section class="h-1/2">
     <!-- <TopSvgContainer {checked} /> -->
 
-    <div class="container relative h-screen">
+    <div class="container relative">
       <div class="fixed top-2 right-4 z-50">
-        <Codepen {checked} {mobile} />
-        <Github {checked} {mobile} />
+        <!-- <Codepen {checked} {mobile} /> -->
         {#if desktop}
           <button
             on:click={() => projectsAnchor.scrollIntoView({ behavior: 'smooth' })}
@@ -58,18 +61,18 @@
               : ''}">What I Do</button
           >
           <button
-            on:click={() =>
-              scrollContainer.scrollTo({ top: scrollContainer.scrollHeight, left: 0, behavior: 'smooth' })}
+            on:click={() => contactAnchor.scrollIntoView({ behavior: 'smooth' })}
             class="prose pr-8 cursor-pointer transform transition-colors duration-2000 {checked
               ? 'text-white hover:text-gray-400'
               : ''}">Contact Me</button
           >
         {/if}
+        <Github {checked} {mobile} />
       </div>
       <div class="fixed top-2 left-4 z-50">
         <Switch text={!mobile ? (checked ? 'Night' : 'Day') : ''} id="toggle" bind:checked />
       </div>
-      <div class="flex flex-col justify-center items-center h-3/5 m-8">
+      <div class="flex flex-col justify-center items-center m-8 profileBox">
         <IntersectionObs let:intersecting top={0}>
           <ProfPic />
 
@@ -119,7 +122,7 @@
           <option value="humble">humble</option>
         </select>
 
-        <span class=" text-md  relative {checked ? 'text-white' : ''} tracking-wider"> software engineer</span>
+        <span class=" text-md relative {checked ? 'text-white' : ''} tracking-wider"> software engineer</span>
       </div>
     </div>
   </section>
@@ -149,11 +152,13 @@
     </div>
   </section>
 
-  <section class="bg-denim-300" style="height:400px">
+  <section class="bg-denim-300" style="height:0px" bind:this={contactAnchor}>
     <div class="flex flex-col justify-center items-center h-full relative">
       <ContactMe {mobile} />
-
-      <ContactForm />
+      <div class="prose prose-lg {checked ? 'text-white' : ''}  mb-16">
+        <a href="mailto:nick_murphy@sbcglobal.net" target="_blank">nick_murphy@sbcglobal.net</a>
+      </div>
+      <!-- <ContactForm /> -->
     </div>
   </section>
 

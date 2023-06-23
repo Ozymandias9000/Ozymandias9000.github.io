@@ -57,14 +57,17 @@
     </div>
 
     <div class="prose prose-lg {checked ? 'text-white' : ''}  mb-16">
-      I've worked on (and led) a number of projects that can't be shown here. Here's a sample of what I've done.
+      I've worked on (and led) a number of projects that can't be shown here. Here's a sample.
     </div>
 
     <SideLabel {checked} label="Projects" down={6} />
 
-    <h4 class="font-serif font-bold uppercase text-orchid-300 tracking-wider">Content Import</h4>
+    <h4 class="font-serif font-bold uppercase text-orchid-300 tracking-wider">Content Importer</h4>
     <div class="prose prose-lg {checked ? 'text-white' : ''}  mb-10">
-      <span> Crawl unstructured content and transform into structured JSON </span>
+      <span>
+        Crawl unstructured content using fleet of workers (ECS/EC2). Transform into structured JSON for consumption by
+        custom CMS. Monitored and configured in an admin portal.
+      </span>
 
       <div class="mt-4 grid grid-cols-4 md:grid-cols-8 gap-8">
         <Ts />
@@ -77,9 +80,9 @@
       </div>
     </div>
 
-    <h4 class="font-serif font-bold uppercase text-orchid-300 tracking-wider">Admin Portal</h4>
+    <h4 class="font-serif font-bold uppercase text-orchid-300 tracking-wider">Contributor Management Admin Portal</h4>
     <div class="prose prose-lg {checked ? 'text-white' : ''}  mb-10">
-      <span>Users + payments management service </span>
+      <span>User + payments management service with custom RBAC auth</span>
 
       <div class="mt-4 grid grid-cols-4 md:grid-cols-8 gap-8">
         <Ts />
@@ -87,6 +90,17 @@
         <Express {checked} />
         <Dynamo />
         <Docker />
+        <Jest />
+      </div>
+    </div>
+
+    <h4 class="font-serif font-bold uppercase text-orchid-300 tracking-wider">Application State Refactor</h4>
+    <div class="prose prose-lg {checked ? 'text-white' : ''}  mb-10">
+      <span> Proposed, designed, and led large-scale frontend state refactor project for checkout product </span>
+
+      <div class="mt-4 grid grid-cols-4 md:grid-cols-8 gap-8">
+        <Ts />
+        <React />
         <Jest />
       </div>
     </div>
@@ -111,12 +125,13 @@
         <Ts />
         <Js />
         <React />
+        <Jest />
       </div>
     </div>
 
     <SideLabel {checked} label="Other Interests" down={26} />
     <div class="prose prose-lg {checked ? 'text-white' : ''}  mb-20">
-      <span> Things I'm keeping an eye on: </span>
+      <span> I'd be interested in working more with: </span>
       <ul>
         <li>Rust</li>
         <li>Terraform</li>
